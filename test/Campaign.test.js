@@ -2,7 +2,7 @@ const assert = require('assert');
 const ganache = require('ganache');
 const Web3 = require('web3');
 
-const web3 = Web3(ganache.provider());
+const web3 = new Web3(ganache.provider());
 
 const compileFactory = require('../ethereum/build/CampaignFactory.json');
 const compileCampaign = require('../ethereum/build/Campaign.json');
@@ -15,7 +15,7 @@ let campaign;
 beforeEach(async () => {
     accounts = await web3.eth.getAccounts();
 
-    factory = await web3.eth.Contract(JSON.parse(compileFactory.interface))
+    factory = await new web3.eth.Contract(JSON.parse(compileFactory.interface))
         .deploy({data: compileFactory.bytecode})
         .send({ from: accounts[0], gas: '1000000'});
 
@@ -25,8 +25,15 @@ beforeEach(async () => {
     });
 
     [campaignAddress] = await factory.methods.getDeployedCampaigns().call();
-    campaign = await web3.rth.Contract(
+    campaign = await new web3.eth.Contract(
         JSON.parse(compileCampaign.interface),
         campaignAddress
     );
+});
+
+describe('Campaigns', () => {
+    it('deploys a factory anda a campaign', () => {
+        assert.ok(factory.options.address);
+        assert.ok(campaign.options.address);
+    });
 });
