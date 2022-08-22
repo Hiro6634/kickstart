@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/Hiro6634/kickstart#readme",
   "dependencies": {
+    "@truffle/hdwallet-provider": "^2.0.14",
     "fs-extra": "^10.1.0",
     "ganache": "^7.4.1",
     "ganache-cli": "^6.12.2",
