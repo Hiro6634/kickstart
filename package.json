@@ -1,0 +1,26 @@
+{
+  "name": "kickstart",
+  "version": "1.0.0",
+  "description": "Ethereum and solidity: The complete Developer's Guide exercice",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Hiro6634/kickstart.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Hiro6634/kickstart/issues"
+  },
+  "homepage": "https://github.com/Hiro6634/kickstart#readme",
+  "dependencies": {
+    "fs-extra": "^10.1.0",
+    "ganache": "^7.4.1",
+    "mocha": "^10.0.0",
+    "solc": "^0.4.17",
+    "web3": "^1.7.5"
+  }
+}
