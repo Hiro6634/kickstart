@@ -65,8 +65,8 @@ contract Campaign {
         //Make sure person calling this function has donate
         require(approvers[msg.sender]);
 
-        //Make sure person calling this function hasn't vote before
-        require(request.approvals[msg.sender]);
+        // //Make sure person calling this function hasn't vote before
+        require(!request.approvals[msg.sender]);
 
         request.approvals[msg.sender]=true;
         request.approvalCount++;
