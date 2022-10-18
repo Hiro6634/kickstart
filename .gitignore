@@ -17135,3 +17135,4 @@ node_modules/use-sync-external-store/shim/with-selector.js
 .next/server/pages/_error.js
 .next/server/pages/newcampaign.js
 .next/server/pages/show.js
+.next/trace
