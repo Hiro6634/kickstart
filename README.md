@@ -1,2 +1,4 @@
 # kickstart
-Ethereum and solidity: The complete Developer's Guide exercice
+Ethereum and solidity: The complete Developer's Guide exercise
+
+
